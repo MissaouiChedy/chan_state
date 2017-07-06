@@ -1,15 +1,19 @@
 # ChanState
 
-To start your Phoenix app:
+A small example of [conserving channel instance assigned state between crashes](http://blog.techdominator.com/article/elixir-phoenix-conserving-channel-instance-assigned-state-between-crashes.html).
+
+## You may want to check the following
+- `web/channels/stateful_channel.ex` which contains the example channel
+- `test/channels/stateful_channel_test.exs` which contains a test case demonstrating state conservation between crashes
+- `lib/chan_state.ex` which contains the initialization of the relevant `:ets` table.
+
+## To run the test case
 
   * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phoenix.server`
+  * Run the test with `mix test test/channels/stateful_channel_test.exs`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
+## Learn more about phoenix
 
   * Official website: http://www.phoenixframework.org/
   * Guides: http://phoenixframework.org/docs/overview
