@@ -7,7 +7,8 @@ defmodule ChanState do
     children = [
       supervisor(ChanState.Endpoint, []),
     ]
-    ## channel state backup
+    
+    ## initialize the channel state backup table
     :ets.new(:holder, [:set, :public, :named_table])
     
     opts = [strategy: :one_for_one, name: ChanState.Supervisor]
